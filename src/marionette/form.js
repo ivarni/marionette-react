@@ -22,7 +22,6 @@ const Form = Marionette.View.extend({
 
         render(
             <ReverseText
-                ref={(_rel) => { this.rel = _rel}}
                 text={text}
             />,
             this.getUI('result')[0]
@@ -31,9 +30,7 @@ const Form = Marionette.View.extend({
 
     onAttach() {
         render(
-            <ReverseText
-                ref={(_rel) => { this.rel = _rel}}
-            />,
+            <ReverseText />,
             this.getUI('result')[0]
         );
     },
